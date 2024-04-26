@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Generator</h1>
+        <!-- <div>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" placeholder="Enter company name">
+        </div> -->
+        <div>
+            <label for="textBefore">Text Before '@':</label>
+            <input type="text" id="textBefore" placeholder="Text before '@'">
+        </div>
+        <div>
+            <label for="domainSelect">Domain:</label>
+            <select id="domainSelect">
+                <option value="com">.com</option>
+                <option value="de">.de</option>
+                <option value="de">.it</option>
+                <option value="de">.au</option>
+                <option value="de">.ch</option>
+            </select>
+        </div>
+        <button onclick="generateEmail()">Generate Email</button>
+        <div>
+            <label for="result">Generated Email in console</label>
+            <!-- <input type="text" id="result" readonly> -->
+        </div>
+    </div>
+
+    <!-- New container for file upload -->
+    <div class="container">
+        <h2>Upload File with name+id</h2>
+        <input type="file" id="fileInput">
+        <button onclick="processFile()">Process File</button>
+    </div>
+
+    <div class="container">
+        <h2>Upload CSV File</h2>
+        <input type="file" id="csvFileInput">
+        <!-- <div>
+            <label for="domainSelect">Select Domain Extensions:</label>
+            <select id="domainSelect" multiple>
+                <option value="com">.com</option>
+                <option value="de">.de</option>
+                <option value="au">.au</option>
+                <option value="ch">.ch</option>
+            </select>
+        </div> -->
+        <!-- <div>
+            <label for="textBefore">Text Before '@':</label>
+            <input type="text" id="textBefore" placeholder="Text before '@'">
+        </div> -->
+        <button onclick="processCSV()">Process CSV</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
